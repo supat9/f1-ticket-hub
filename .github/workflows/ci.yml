@@ -1,0 +1,66 @@
+name: Ticket lifecycle
+
+on:
+  pull_request:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    services:
+      postgres:
+        image: postgres:18
+        env:
+          POSTGRES_DB: f1_test
+          POSTGRES_USER: f1
+          POSTGRES_PASSWORD: ci_only
+        ports:
+          - 5432/tcp
+        options: >-
+          --health-cmd "pg_isready -U f1 -d f1_test"
+          --health-interval 5s --health-timeout 5s --health-retries 12
+
+    steps:
+      - uses: actions/checkout@v7
+      - uses: actions/setup-go@v7
+        with:
+          go-version-file: backend/go.mod
+          cache-dependency-path: backend/go.sum
+      - uses: actions/setup-node@v7
+        with:
+          node-version: '24'
+          cache: npm
+          cache-dependency-path: frontend/package-lock.json
+      - name: Configure disposable database
+        run: echo "F1_TEST_DATABASE_URL=postgres://f1:ci_only@127.0.0.1:${{ job.services.postgres.ports['5432'] }}/f1_test?sslmode=disable" >> "$GITHUB_ENV"
+      - name: Check backend with PostgreSQL
+        working-directory: backend
+        run: |
+          go vet ./...
+          go test -count=1 ./...
+      - name: Build and check frontend
+        working-directory: frontend
+        run: |
+          npm ci
+          npm run lint
+          npm run build
+      - name: Install test browser
+        working-directory: frontend
+        run: npx playwright install --with-deps --only-shell chromium
+      - name: Verify support and developer lifecycle
+        working-directory: frontend
+        run: npm run test:e2e
+      - name: Retain failed browser trace
+        if: failure()
+        uses: actions/upload-artifact@v7
+        with:
+          name: ticket-lifecycle-trace
+          path: frontend/test-results/**/trace.zip
+          if-no-files-found: ignore
+          retention-days: 7

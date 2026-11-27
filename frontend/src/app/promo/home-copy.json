@@ -1,0 +1,370 @@
+{
+  "navLabel": [
+    "เมนูหลัก",
+    "Main navigation"
+  ],
+  "language": [
+    "ภาษา",
+    "Language"
+  ],
+  "navFeatures": [
+    "ฟีเจอร์",
+    "Features"
+  ],
+  "caseStudy": [
+    "กรณีศึกษา",
+    "Case study"
+  ],
+  "navDevelopers": [
+    "สำหรับนักพัฒนา",
+    "Developers"
+  ],
+  "eyebrow": [
+    "ระบบจัดการเคสสำหรับทีมซัพพอร์ตและนักพัฒนา",
+    "Case management for support and engineering"
+  ],
+  "heroFirst": [
+    "รับเรื่อง ส่งต่อ",
+    "Report. Handoff."
+  ],
+  "heroSecond": [
+    "ปิดเคสในที่เดียว",
+    "Resolve in one place."
+  ],
+  "heroDescription": [
+    "ให้ทีมซัพพอร์ตและทีมพัฒนาเห็นข้อมูลเดียวกัน ตั้งแต่รับแจ้งจนถึงตรวจรับการแก้ไข",
+    "Share every detail from the first customer report through to verifying the fix."
+  ],
+  "tryDemo": [
+    "ลองใช้เดโม",
+    "Try the demo"
+  ],
+  "seeHow": [
+    "ดูวิธีทำงาน",
+    "See how it works"
+  ],
+  "example": [
+    "เคสตัวอย่าง",
+    "Example case"
+  ],
+  "exampleTitle": [
+    "หนึ่งยอดชำระ สองคำสั่งซื้อ",
+    "One payment, two orders"
+  ],
+  "maya": [
+    "Maya · ซัพพอร์ต",
+    "Maya · Support"
+  ],
+  "alex": [
+    "Alex · ทีมพัฒนา",
+    "Alex · Engineering"
+  ],
+  "alexNote": [
+    "ส่ง PR #42 พร้อมผลทดสอบ",
+    "Shared PR #42 and test results"
+  ],
+  "result": [
+    "ทดสอบแล้ว ได้คำสั่งซื้อเดียว",
+    "Engineering test: one order created"
+  ],
+  "featuresTitle": [
+    "เห็นทุกเคสในบอร์ดเดียว",
+    "See every case on one board"
+  ],
+  "board": [
+    "บอร์ดงาน",
+    "Board"
+  ],
+  "triage": [
+    "คัดกรองด้วย AI",
+    "AI triage"
+  ],
+  "handoff": [
+    "ส่งต่องาน",
+    "Handoff"
+  ],
+  "demoData": [
+    "ข้อมูลตัวอย่างสำหรับทดลองใช้งาน",
+    "Sample data for the demo"
+  ],
+  "search": [
+    "ค้นหาเคส",
+    "Search cases"
+  ],
+  "newCase": [
+    "สร้างเคส",
+    "New case"
+  ],
+  "noCases": [
+    "ไม่พบเคสที่ตรงกับคำค้น",
+    "No matching cases"
+  ],
+  "new": [
+    "เปิดใหม่",
+    "Open"
+  ],
+  "working": [
+    "กำลังดำเนินการ",
+    "In progress"
+  ],
+  "review": [
+    "รอตรวจรับ",
+    "In review"
+  ],
+  "closed": [
+    "ปิดแล้ว",
+    "Closed"
+  ],
+  "payments": [
+    "การชำระเงิน",
+    "Payments"
+  ],
+  "general": [
+    "ทั่วไป",
+    "General"
+  ],
+  "unassigned": [
+    "ยังไม่มอบหมาย",
+    "Unassigned"
+  ],
+  "triageTitle": [
+    "ข้อมูลพอส่งเคสให้ทีมพัฒนาหรือยัง?",
+    "Is this report ready for engineering?"
+  ],
+  "triageDescription": [
+    "ลองประเมินข้อความแรก แล้วเพิ่มคำตอบของลูกค้าเพื่อดูว่า AI แนะนำให้ทำอะไรต่อ",
+    "Assess the first message, then include the customer’s reply and compare the recommended next step."
+  ],
+  "includeReply": [
+    "เพิ่มคำตอบตัวอย่างจากลูกค้า",
+    "Include the sample customer reply"
+  ],
+  "assess": [
+    "ดูผลประเมินตัวอย่าง",
+    "View example assessment"
+  ],
+  "assessing": [
+    "กำลังเปิดผลตัวอย่าง…",
+    "Loading example…"
+  ],
+  "unavailable": [
+    "โหลดตัวอย่างไม่ได้ กรุณาลองอีกครั้ง",
+    "Could not load this example. Try again."
+  ],
+  "askFirst": [
+    "ควรถามลูกค้าเพิ่ม",
+    "Ask the customer first"
+  ],
+  "ready": [
+    "พร้อมส่งให้ทีมพัฒนาตรวจสอบ",
+    "Ready for engineering review"
+  ],
+  "customerQuestion": [
+    "คำถามจากคู่มือซัพพอร์ต",
+    "Customer question from the support playbook"
+  ],
+  "acceptance": [
+    "วิธีตรวจรับจากคู่มือซัพพอร์ต",
+    "Acceptance check from the support playbook"
+  ],
+  "checkoutQuestion": [
+    "หลังจากหน้าจอค้าง ในประวัติคำสั่งซื้อเห็นกี่รายการสำหรับการชำระครั้งนี้คะ?",
+    "After the screen froze, how many orders did you see in your order history for that payment?"
+  ],
+  "checkoutCheck": [
+    "ในระบบทดสอบ ให้จำลองการชำระเงินที่หมดเวลาแล้วกดจ่ายซ้ำ ตรวจว่ายอดชำระเดิมผูกกับคำสั่งซื้อเพียงรายการเดียว",
+    "In the test gateway, simulate a timeout and retry the same payment. Verify that the original payment is linked to exactly one order."
+  ],
+  "unknownOutcome": [
+    "ข้อความแรกยังไม่บอกว่าเกิดคำสั่งซื้อหรือมียอดตัดเงินหรือไม่",
+    "The first message does not say whether an order or charge appeared."
+  ],
+  "observedOutcome": [
+    "ลูกค้ายืนยันว่ากดจ่ายซ้ำหลังหมดเวลา ประวัติมีสองคำสั่งซื้อ แต่ธนาคารแจ้งตัดเงินครั้งเดียว",
+    "The customer reports a retry after a timeout, two orders in their history, and one bank charge."
+  ],
+  "copyQuestion": [
+    "คัดลอกคำถามถึงลูกค้า",
+    "Copy customer question"
+  ],
+  "copyHandoff": [
+    "คัดลอกบรีฟส่งทีมพัฒนา",
+    "Copy engineering brief"
+  ],
+  "copied": [
+    "คัดลอกแล้ว",
+    "Copied"
+  ],
+  "manualCopy": [
+    "เลือกข้อความเพื่อคัดลอกได้เลย",
+    "Select the text to copy it."
+  ],
+  "reviewed": [
+    "ตัวอย่างจากคู่มือซัพพอร์ต",
+    "Prepared support playbook example"
+  ],
+  "handoffDescription": [
+    "เมื่อทีมพัฒนาส่งผลทดสอบกลับมา ซัพพอร์ตลองทำตามขั้นตอนเดิมเพื่อตรวจรับก่อนปิดเคส",
+    "After engineering submits the fix, support repeats the original steps and verifies the result before closing the case."
+  ],
+  "verify": [
+    "ยืนยันผลทดสอบ",
+    "Verify test result"
+  ],
+  "verified": [
+    "ตรวจแล้ว ได้คำสั่งซื้อเพียงรายการเดียว",
+    "Verified: only one order was created"
+  ],
+  "closeCase": [
+    "ปิดเคส",
+    "Close case"
+  ],
+  "studyTitle": [
+    "ใครควรปิดเคสนี้?",
+    "Who should close this case?"
+  ],
+  "studyDescription": [
+    "เมื่อลูกค้าชำระอีกครั้งหลังระบบหมดเวลา กลับพบคำสั่งซื้อสองรายการจากยอดชำระเดียว",
+    "When a customer retries payment after a timeout, a single payment creates two orders."
+  ],
+  "walkThrough": [
+    "ลองเดินเคสนี้",
+    "Walk through the case"
+  ],
+  "stepOne": [
+    "บันทึกขั้นตอนที่ทำให้เกิดปัญหา",
+    "Record the steps that trigger the issue"
+  ],
+  "stepOneNote": [
+    "ทีมพัฒนาใช้ขั้นตอนนี้ทดสอบและแก้ไขปัญหา",
+    "Engineering uses those steps to test and fix the issue."
+  ],
+  "stepTwo": [
+    "ซัพพอร์ตตรวจผลและปิดเคส",
+    "Support verifies the fix and closes the case"
+  ],
+  "stepTwoNote": [
+    "ตรวจว่าการชำระซ้ำสร้างคำสั่งซื้อเพียงรายการเดียว",
+    "Support verifies that retrying payment creates a single order."
+  ],
+  "developerTitleStart": [
+    "บันทึกผลทดสอบจาก",
+    "Log test results from"
+  ],
+  "developerTitleEnd": [
+    "เครื่องมือเขียนโค้ด",
+    "your coding tools"
+  ],
+  "developerDescription": [
+    "เชื่อม Claude Code หรือ Codex ด้วยบัญชี Dev ผ่าน MCP แล้วสั่งงานเป็นภาษาปกติได้ ผลทดสอบจะอยู่ในประวัติเคสเดียวกับที่ซัพพอร์ตใช้ตรวจรับ",
+    "Connect Claude Code or Codex to F1 through MCP with your developer account. Ask in plain language and leave test evidence in the same ticket that support reviews."
+  ],
+  "queuePrompt": [
+    "“วันนี้มีเคสไหนของฉันครบกำหนดบ้าง เรียงตามความสำคัญให้หน่อย”",
+    "“Which of my tickets are due today? Rank them by priority.”"
+  ],
+  "queueHint": [
+    "ดูเคสที่ยังเปิดและครบกำหนดวันนี้ตามเวลาไทย",
+    "Shows open work due today in Bangkok time."
+  ],
+  "handoffPrompt": [
+    "“ส่งเคส F1-000108 ให้ซัพพอร์ตตรวจรับ พร้อมผลเทสต์ที่รันแล้ว”",
+    "“Submit F1-000108 for support review with the results of the tests I ran.”"
+  ],
+  "handoffHint": [
+    "ส่งงานที่ได้รับมอบหมายกลับไปให้ซัพพอร์ตตรวจและปิดเคส",
+    "Returns an assigned handoff to support for verification and closure."
+  ],
+  "connectHeading": [
+    "วิธีเชื่อมจากเครื่องนักพัฒนา",
+    "Connect from your workstation"
+  ],
+  "connectBody": [
+    "เปิด F1 API บนเครื่อง แล้วรันคำสั่งของไคลเอนต์ที่ต้องการใน PowerShell จากโฟลเดอร์โปรเจกต์ สคริปต์จะให้ลงชื่อเข้าใช้ด้วยบัญชี Dev",
+    "Start the local F1 API. From the project root, run the command for your client in PowerShell and sign in with your developer account when prompted."
+  ],
+  "noteHeading": [
+    "ตัวอย่าง · เคส F1-000108",
+    "Example · Ticket F1-000108"
+  ],
+  "notePrompt": [
+    "“ช่วยบันทึกผลเทสต์ลงเคสนี้ ลองกดจ่ายซ้ำหลังระบบหมดเวลาแล้ว ได้คำสั่งซื้อเดียว”",
+    "“Log my test result on this ticket. I retried checkout after a timeout and got one order.”"
+  ],
+  "noteExplanation": [
+    "Codex เพิ่มบันทึกในประวัติเคส สถานะเคสยังอยู่ขั้นเดิมจนกว่านักพัฒนาจะส่งให้ตรวจรับ",
+    "Codex adds a note to the ticket timeline. The developer submits the fix for review in a separate step."
+  ],
+  "timelineLabel": [
+    "สิ่งที่ซัพพอร์ตเห็นในประวัติเคส",
+    "What support sees in the ticket timeline"
+  ],
+  "timelineNote": [
+    "Alex · ทดสอบจ่ายซ้ำหลังหมดเวลา ระบบคืนคำสั่งซื้อเดิมและไม่สร้างรายการที่สอง",
+    "Alex · Retried checkout after a timeout. The original order was returned and no second order was created."
+  ],
+  "staff": [
+    "พื้นที่เจ้าหน้าที่",
+    "Staff workspace"
+  ],
+  "close": [
+    "ปิด",
+    "Close"
+  ],
+  "caseName": [
+    "ชื่อเคส",
+    "Case title"
+  ],
+  "titleRequired": [
+    "กรุณากรอกชื่อเคส",
+    "Enter a case title."
+  ],
+  "languageError": [
+    "บันทึกภาษาไม่ได้ กรุณาลองอีกครั้ง",
+    "Could not save the language. Try again."
+  ],
+  "portal": [
+    "พอร์ทัลลูกค้า",
+    "Customer Portal"
+  ],
+  "workspace": [
+    "พื้นที่ทำงาน",
+    "Workspace"
+  ],
+  "caseDetails": [
+    "รายละเอียดเคส",
+    "Case details"
+  ],
+  "meta": [
+    "F1 Ticket Hub ระบบจัดการเคสสำหรับทีมซัพพอร์ตและนักพัฒนา",
+    "F1 Ticket Hub ticket management for support and engineering teams"
+  ],
+  "liveMode": [
+    "ประเมินด้วย Qwen บนเครื่อง",
+    "Use local Qwen for this assessment"
+  ],
+  "liveAction": [
+    "ประเมินด้วย Qwen",
+    "Assess with Qwen"
+  ],
+  "livePending": [
+    "Qwen กำลังอ่านข้อมูลเคส…",
+    "Qwen is reading the report…"
+  ],
+  "liveResult": [
+    "ผลประเมินจาก Qwen · ตรวจทานก่อนส่งต่อ",
+    "Qwen assessment · Review before sharing"
+  ],
+  "liveBusy": [
+    "Qwen กำลังอ่านเคสอื่น กรุณาลองอีกครั้ง",
+    "Qwen is reading another case. Try again shortly."
+  ],
+  "liveTimeout": [
+    "การประเมินเกินเวลาที่กำหนด ลองอีกครั้งหรือเปิดผลตัวอย่าง",
+    "Assessment timed out. Retry or view the prepared example."
+  ],
+  "liveError": [
+    "ติดต่อ Qwen ไม่ได้ ลองอีกครั้งหรือเปิดผลตัวอย่าง",
+    "Qwen is unavailable. Retry or view the prepared example."
+  ]
+}

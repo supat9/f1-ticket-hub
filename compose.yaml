@@ -1,0 +1,35 @@
+name: f1
+
+services:
+  triage-ai:
+    image: ghcr.io/ggml-org/llama.cpp:server@sha256:b24873ae66a4732e0b4b66dd7dc658066ccad6e8c63524278e92eebc767aacbe
+    profiles: ["ai"]
+    command: ["-hf", "Qwen/Qwen3-1.7B-GGUF:Q8_0", "--alias", "f1-triage", "--host", "0.0.0.0", "--port", "8080", "-c", "4096", "-np", "1", "-t", "4"]
+    environment:
+      LLAMA_CACHE: /models
+      LLAMA_ARG_CORS_ORIGINS: http://127.0.0.1:8092
+      LLAMA_ARG_UI: "0"
+    ports:
+      - "127.0.0.1:8092:8080"
+    volumes:
+      - triage-models:/models
+
+  postgres:
+    image: postgres:18
+    environment:
+      POSTGRES_DB: f1
+      POSTGRES_USER: f1
+      POSTGRES_PASSWORD: f1_local_dev
+    ports:
+      - "127.0.0.1:5433:5432"
+    volumes:
+      - postgres-data:/var/lib/postgresql
+    healthcheck:
+      test: ["CMD", "pg_isready", "-h", "127.0.0.1", "-U", "f1", "-d", "f1"]
+      interval: 5s
+      timeout: 3s
+      retries: 12
+
+volumes:
+  postgres-data:
+  triage-models:

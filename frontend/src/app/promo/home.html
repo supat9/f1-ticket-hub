@@ -1,0 +1,281 @@
+<!doctype html>
+<html lang="th">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#151719">
+<meta name="description" content="{{copy:meta}}">
+<link rel="icon" href="/icon.png">
+<title>F1 Ticket Hub</title>
+<link rel="stylesheet" href="/design-preview-assets/preview.css">
+</head>
+<body id="top">
+<svg xmlns="http://www.w3.org/2000/svg" width="0" height="0" aria-hidden="true" style="position:absolute">
+  <symbol id="i-board" viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="16" rx="2"/><path d="M9 4v16m6-16v16"/></symbol>
+  <symbol id="i-spark" viewBox="0 0 24 24"><path d="M12 2l2.7 7.3L22 12l-7.3 2.7L12 22l-2.7-7.3L2 12l7.3-2.7z"/></symbol>
+  <symbol id="i-transfer" viewBox="0 0 24 24"><path d="M4 7h15m-4-4 4 4-4 4m5 6H5m4-4-4 4 4 4"/></symbol>
+  <symbol id="i-note" viewBox="0 0 24 24"><rect x="5" y="3" width="14" height="18" rx="2"/><path d="M9 8h6m-6 4h6m-6 4h3"/></symbol>
+  <symbol id="i-check" viewBox="0 0 24 24"><path d="m4 12 5 5L20 6"/></symbol>
+  <symbol id="i-search" viewBox="0 0 24 24"><circle cx="10.5" cy="10.5" r="6.5"/><path d="m16 16 4 4"/></symbol>
+  <symbol id="i-plus" viewBox="0 0 24 24"><path d="M12 5v14M5 12h14"/></symbol>
+</svg>
+<header class="site-header">
+  <div class="wrap">
+    <a class="brand" href="#top"><span class="mark" aria-hidden="true"></span>F1 Ticket Hub</a>
+    <nav class="site-nav" aria-label="{{copy:navLabel}}" data-label="navLabel">
+      <a href="#features" data-copy="navFeatures">{{copy:navFeatures}}</a>
+      <a href="#case-study" data-copy="caseStudy">{{copy:caseStudy}}</a>
+      <a href="#developers" data-copy="navDevelopers">{{copy:navDevelopers}}</a>
+    </nav>
+    <fieldset class="locale" aria-label="{{copy:language}}" data-label="language">
+      <button type="button" lang="th" data-lang="th" aria-pressed="true">ไทย</button>
+      <button type="button" lang="en" data-lang="en" aria-pressed="false">EN</button>
+    </fieldset>
+  </div>
+  <div role="status" id="language-message"></div>
+</header>
+<main>
+  <section class="hero" aria-labelledby="hero-title">
+    <div class="wrap hero-grid">
+      <div>
+        <p class="eyebrow" data-copy="eyebrow">{{copy:eyebrow}}</p>
+        <h1 id="hero-title"><span data-copy="heroFirst">{{copy:heroFirst}}</span><span class="accent" data-copy="heroSecond">{{copy:heroSecond}}</span></h1>
+        <p class="hero-description" data-copy="heroDescription">{{copy:heroDescription}}</p>
+        <div class="hero-actions">
+          <a href="/demo#all" class="primary" data-copy="tryDemo">{{copy:tryDemo}}</a>
+          <a href="#features" class="secondary" data-open-tab="handoff" data-copy="seeHow">{{copy:seeHow}}</a>
+        </div>
+      </div>
+      <article class="ticket" aria-labelledby="ticket-title">
+        <div class="ticket-header">
+          <div class="ticket-label"><svg class="icon" aria-hidden="true"><use href="#i-note"/></svg><span data-copy="example">{{copy:example}}</span></div>
+          <div class="ticket-meta"><span class="case-id">F1-000108</span><span class="status" id="hero-status">{{copy:review}}</span></div>
+        </div>
+        <div class="ticket-body">
+          <h2 id="ticket-title" data-copy="exampleTitle">{{copy:exampleTitle}}</h2>
+          <ol class="activity">
+            <li><span class="avatar" aria-hidden="true">M</span><div><strong data-copy="maya">{{copy:maya}}</strong><span data-copy="stepOne">{{copy:stepOne}}</span></div></li>
+            <li><span class="avatar engineer" aria-hidden="true">A</span><div><strong data-copy="alex">{{copy:alex}}</strong><span data-copy="alexNote">{{copy:alexNote}}</span></div></li>
+          </ol>
+          <div class="outcome"><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg><span data-copy="result">{{copy:result}}</span></div>
+        </div>
+      </article>
+    </div>
+  </section>
+  <div id="product"></div>
+  <section class="wrap features" id="features" aria-labelledby="features-title">
+    <h2 id="features-title" class="section-title" data-copy="featuresTitle">{{copy:featuresTitle}}</h2>
+    <div class="tabs" role="tablist" aria-label="{{copy:navFeatures}}" data-label="navFeatures">
+      <button type="button" role="tab" id="tab-board" aria-selected="true" aria-controls="panel-board" data-tab="board"><svg class="icon" aria-hidden="true"><use href="#i-board"/></svg><span data-copy="board">{{copy:board}}</span></button>
+      <button type="button" role="tab" id="tab-triage" aria-selected="false" aria-controls="panel-triage" tabindex="-1" data-tab="triage"><svg class="icon" aria-hidden="true"><use href="#i-spark"/></svg><span data-copy="triage">{{copy:triage}}</span></button>
+      <button type="button" role="tab" id="tab-handoff" aria-selected="false" aria-controls="panel-handoff" tabindex="-1" data-tab="handoff"><svg class="icon" aria-hidden="true"><use href="#i-transfer"/></svg><span data-copy="handoff">{{copy:handoff}}</span></button>
+    </div>
+    <div class="product">
+      <aside class="product-side">
+        <div class="brand"><span class="mark" aria-hidden="true"></span>F1 Ticket Hub</div>
+        <div class="side-menu">
+          <button type="button" data-open-tab="board" aria-current="true"><svg class="icon" aria-hidden="true"><use href="#i-board"/></svg><span data-copy="board">{{copy:board}}</span></button>
+          <button type="button" data-open-tab="triage"><svg class="icon" aria-hidden="true"><use href="#i-spark"/></svg><span data-copy="triage">{{copy:triage}}</span></button>
+          <button type="button" data-open-tab="handoff"><svg class="icon" aria-hidden="true"><use href="#i-transfer"/></svg><span data-copy="handoff">{{copy:handoff}}</span></button>
+        </div>
+      </aside>
+      <div class="product-main">
+        <section id="panel-board" role="tabpanel" aria-labelledby="tab-board">
+          <div class="board-heading">
+            <div><h3 data-copy="board">{{copy:board}}</h3><p class="caption" data-copy="demoData">{{copy:demoData}}</p></div>
+            <div class="board-actions">
+              <label class="search"><svg class="icon" aria-hidden="true"><use href="#i-search"/></svg><input id="search" type="search" placeholder="{{copy:search}}" aria-label="{{copy:search}}" data-label="search" data-placeholder="search"></label>
+              <button class="primary compact" type="button" id="new-case"><svg class="icon" aria-hidden="true"><use href="#i-plus"/></svg><span data-copy="newCase">{{copy:newCase}}</span></button>
+            </div>
+          </div>
+          <div class="board" id="board"></div>
+          <p class="caption" id="board-empty" role="status" data-copy="noCases" hidden>{{copy:noCases}}</p>
+        </section>
+        <section id="panel-triage" class="feature-demo" role="tabpanel" aria-labelledby="tab-triage" hidden>
+          <h3 id="ai-triage" data-copy="triageTitle">{{copy:triageTitle}}</h3>
+          <p data-copy="triageDescription">{{copy:triageDescription}}</p>
+          <blockquote class="feature-quote"><span id="triage-report"></span><p id="triage-reply" hidden></p></blockquote>
+          <label class="triage-evidence"><input type="checkbox" id="include-reply"><span data-copy="includeReply">{{copy:includeReply}}</span></label>
+          <label class="triage-evidence"><input type="checkbox" id="live-triage"><span data-copy="liveMode">{{copy:liveMode}}</span></label>
+          <button type="button" class="primary compact" id="show-triage" aria-controls="triage-result" data-copy="assess">{{copy:assess}}</button>
+          <span id="triage-message" role="status"></span>
+          <div class="feature-result" id="triage-result" hidden>
+            <h4 id="triage-decision">{{copy:triage}}</h4><p id="triage-impact"></p>
+            <strong id="triage-action-label"></strong><p id="triage-action"></p>
+            <button type="button" class="text-link" id="copy-triage"></button>
+          </div>
+        </section>
+        <section id="panel-handoff" class="feature-demo" role="tabpanel" aria-labelledby="tab-handoff" hidden>
+          <h3 data-copy="exampleTitle">{{copy:exampleTitle}}</h3>
+          <p data-copy="handoffDescription">{{copy:handoffDescription}}</p>
+          <div class="feature-quote"><span class="case-id">F1-000108</span><div id="handoff-state" role="status">{{copy:review}}</div></div>
+          <button type="button" class="primary compact" id="advance-handoff">{{copy:verify}}</button>
+        </section>
+      </div>
+    </div>
+  </section>
+  <section class="wrap case-study" id="case-study" aria-labelledby="study-title">
+    <div>
+      <p class="eyebrow" data-copy="caseStudy">{{copy:caseStudy}}</p>
+      <h2 class="section-title" id="study-title" data-copy="studyTitle">{{copy:studyTitle}}</h2>
+      <p data-copy="studyDescription">{{copy:studyDescription}}</p>
+      <a class="text-link" href="/demo#walkthrough" data-copy="walkThrough">{{copy:walkThrough}}</a>
+    </div>
+    <div class="steps">
+      <div class="step">
+        <span class="step-icon"><svg class="icon" aria-hidden="true"><use href="#i-note"/></svg></span>
+        <div><h3 data-copy="stepOne">{{copy:stepOne}}</h3><p data-copy="stepOneNote">{{copy:stepOneNote}}</p></div>
+      </div>
+      <div class="step">
+        <span class="step-icon"><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg></span>
+        <div><h3 data-copy="stepTwo">{{copy:stepTwo}}</h3><p data-copy="stepTwoNote">{{copy:stepTwoNote}}</p></div>
+      </div>
+    </div>
+  </section>
+  <section class="developer" id="developers" aria-labelledby="developer-title">
+    <div class="wrap">
+      <div>
+        <h2 class="section-title" id="developer-title"><span data-copy="developerTitleStart">{{copy:developerTitleStart}}</span> <span data-copy="developerTitleEnd">{{copy:developerTitleEnd}}</span></h2>
+        <p data-copy="developerDescription">{{copy:developerDescription}}</p>
+        <dl class="mcp-prompts">
+          <dt data-copy="queuePrompt">{{copy:queuePrompt}}</dt>
+          <dd><code>f1_list_tickets</code><span data-copy="queueHint">{{copy:queueHint}}</span></dd>
+          <dt data-copy="handoffPrompt">{{copy:handoffPrompt}}</dt>
+          <dd><code>f1_update_handoff</code><span data-copy="handoffHint">{{copy:handoffHint}}</span></dd>
+        </dl>
+        <details class="mcp-connect"><summary data-copy="connectHeading">{{copy:connectHeading}}</summary>
+          <p data-copy="connectBody">{{copy:connectBody}}</p>
+          <code>.\scripts\Connect-F1Mcp.ps1 -Client Codex</code>
+          <code>.\scripts\Connect-F1Mcp.ps1 -Client Claude</code>
+        </details>
+      </div>
+      <div class="terminal">
+        <div class="terminal-top" aria-hidden="true"><i></i><i></i><i></i></div>
+        <h3 data-copy="noteHeading">{{copy:noteHeading}}</h3>
+        <p class="mcp-quote" data-copy="notePrompt">{{copy:notePrompt}}</p>
+        <code><span aria-hidden="true">&gt;</span>f1_add_note</code>
+        <p data-copy="noteExplanation">{{copy:noteExplanation}}</p>
+        <div class="mcp-entry"><strong data-copy="timelineLabel">{{copy:timelineLabel}}</strong><p data-copy="timelineNote">{{copy:timelineNote}}</p></div>
+      </div>
+    </div>
+  </section>
+</main>
+<footer class="footer">
+  <div class="wrap">
+    <a class="brand" href="#top"><span class="mark" aria-hidden="true"></span>F1 Ticket Hub</a>
+    <a class="text-link" href="/workspace" data-copy="staff">{{copy:staff}}</a>
+  </div>
+</footer>
+<dialog id="case-dialog" aria-labelledby="dialog-title">
+  <div class="dialog-heading"><h2 id="dialog-title">{{copy:caseDetails}}</h2><button type="button" class="close-dialog" id="close-dialog" aria-label="{{copy:close}}" data-label="close">×</button></div>
+  <div id="case-details" class="dialog-details"></div>
+  <form id="case-form" hidden>
+    <label><span data-copy="caseName">{{copy:caseName}}</span><input id="case-input" name="title" required maxlength="100"></label>
+    <button type="submit" class="primary compact" data-copy="newCase">{{copy:newCase}}</button>
+  </form>
+</dialog>
+<template id="card-template">
+  <button type="button" class="board-card"><span class="case-id"></span><strong></strong><span class="card-meta"><span class="card-owner"></span><span class="card-category"></span></span></button>
+</template>
+<script type="application/json" id="board-data">"{{boardData}}"</script>
+<script type="application/json" id="home-copy">"{{homeCopy}}"</script>
+<script type="application/json" id="checkout-report-data">"{{checkoutReport}}"</script>
+<script src="/design-preview-assets/preview.js?v=board3" defer></script>
+<!--
+Copyright 2022 The Noto Project Authors (https://github.com/notofonts/thai)
+
+This Font Software is licensed under the SIL Open Font License, Version 1.1.
+This license is copied below, and is also available with a FAQ at:
+https://scripts.sil.org/OFL
+
+
+—————————————————————————————-
+SIL OPEN FONT LICENSE Version 1.1 - 26 February 2007
+—————————————————————————————-
+
+PREAMBLE
+The goals of the Open Font License (OFL) are to stimulate worldwide
+development of collaborative font projects, to support the font creation
+efforts of academic and linguistic communities, and to provide a free and
+open framework in which fonts may be shared and improved in partnership
+with others.
+
+The OFL allows the licensed fonts to be used, studied, modified and
+redistributed freely as long as they are not sold by themselves. The
+fonts, including any derivative works, can be bundled, embedded, 
+redistributed and/or sold with any software provided that any reserved
+names are not used by derivative works. The fonts and derivatives,
+however, cannot be released under any other type of license. The
+requirement for fonts to remain under this license does not apply
+to any document created using the fonts or their derivatives.
+
+DEFINITIONS
+"Font Software" refers to the set of files released by the Copyright
+Holder(s) under this license and clearly marked as such. This may
+include source files, build scripts and documentation.
+
+"Reserved Font Name" refers to any names specified as such after the
+copyright statement(s).
+
+"Original Version" refers to the collection of Font Software components as
+distributed by the Copyright Holder(s).
+
+"Modified Version" refers to any derivative made by adding to, deleting,
+or substituting — in part or in whole — any of the components of the
+Original Version, by changing formats or by porting the Font Software to a
+new environment.
+
+"Author" refers to any designer, engineer, programmer, technical
+writer or other person who contributed to the Font Software.
+
+PERMISSION & CONDITIONS
+Permission is hereby granted, free of charge, to any person obtaining
+a copy of the Font Software, to use, study, copy, merge, embed, modify,
+redistribute, and sell modified and unmodified copies of the Font
+Software, subject to the following conditions:
+
+1) Neither the Font Software nor any of its individual components,
+in Original or Modified Versions, may be sold by itself.
+
+2) Original or Modified Versions of the Font Software may be bundled,
+redistributed and/or sold with any software, provided that each copy
+contains the above copyright notice and this license. These can be
+included either as stand-alone text files, human-readable headers or
+in the appropriate machine-readable metadata fields within text or
+binary files as long as those fields can be easily viewed by the user.
+
+3) No Modified Version of the Font Software may use the Reserved Font
+Name(s) unless explicit written permission is granted by the corresponding
+Copyright Holder. This restriction only applies to the primary font name as
+presented to the users.
+
+4) The name(s) of the Copyright Holder(s) or the Author(s) of the Font
+Software shall not be used to promote, endorse or advertise any
+Modified Version, except to acknowledge the contribution(s) of the
+Copyright Holder(s) and the Author(s) or with their explicit written
+permission.
+
+5) The Font Software, modified or unmodified, in part or in whole,
+must be distributed entirely under this license, and must not be
+distributed under any other license. The requirement for fonts to
+remain under this license does not apply to any document created
+using the Font Software.
+
+TERMINATION
+This license becomes null and void if any of the above conditions are
+not met.
+
+DISCLAIMER
+THE FONT SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND,
+EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO ANY WARRANTIES OF
+MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT
+OF COPYRIGHT, PATENT, TRADEMARK, OR OTHER RIGHT. IN NO EVENT SHALL THE
+COPYRIGHT HOLDER BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY,
+INCLUDING ANY GENERAL, SPECIAL, INDIRECT, INCIDENTAL, OR CONSEQUENTIAL
+DAMAGES, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
+FROM, OUT OF THE USE OR INABILITY TO USE THE FONT SOFTWARE OR FROM
+OTHER DEALINGS IN THE FONT SOFTWARE.
+
+-->
+</body>
+</html>

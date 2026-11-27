@@ -1,0 +1,26 @@
+{
+  "$schema": "https://openapi.vercel.sh/vercel.json",
+  "regions": ["sin1"],
+  "services": {
+    "frontend": {
+      "root": "frontend",
+      "framework": "nextjs",
+      "bindings": [
+        { "type": "service", "service": "backend", "format": "url", "env": "F1_BACKEND_URL" }
+      ]
+    },
+    "backend": {
+      "root": "backend",
+      "framework": "go",
+      "buildCommand": "go build -o server ./cmd/api",
+      "devCommand": "go run ./cmd/api"
+    }
+  },
+  "rewrites": [
+    { "source": "/healthz", "destination": { "service": "backend" } },
+    { "source": "/api/auth/login", "destination": { "service": "backend" } },
+    { "source": "/api/auth/dev-token", "destination": { "service": "backend" } },
+    { "source": "/api/automation/(.*)", "destination": { "service": "backend" } },
+    { "source": "/(.*)", "destination": { "service": "frontend" } }
+  ]
+}

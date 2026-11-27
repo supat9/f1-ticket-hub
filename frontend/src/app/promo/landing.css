@@ -1,0 +1,439 @@
+.promo-page {
+	--paper: #fbfaf8;
+	--ink: #191b1e;
+	--muted-ink: #52565a;
+	--red: #c83419;
+	--promo-display: "Chakra Petch", "IBM Plex Sans Thai", sans-serif;
+	font-family: "IBM Plex Sans Thai", Sarabun, sans-serif;
+	background: var(--paper);
+	color: var(--ink);
+}
+.promo-page :is(h1, h2, .promo-caption h3, .brand-name) {
+	font-family: var(--promo-display);
+	font-weight: 600;
+}
+.promo-page :is(h1, h2, h3, p) {
+	margin: 0;
+}
+.promo-page :is(a, button):focus-visible {
+	outline: 3px solid #438cef;
+	outline-offset: 4px;
+}
+.promo-frame {
+	width: min(1240px, 90%);
+	margin-inline: auto;
+}
+.promo-header {
+	border-bottom: 1px solid #deddd9;
+	background: var(--paper);
+}
+.promo-nav,
+.promo-nav-links,
+.promo-utilities,
+.promo-hero-actions,
+.promo-footer {
+	display: flex;
+	align-items: center;
+}
+.promo-nav {
+	min-height: 68px;
+	gap: clamp(22px, 4vw, 64px);
+}
+.promo-page a {
+	text-decoration: none;
+}
+.promo-logo {
+	color: var(--ink);
+	display: inline-flex;
+}
+.promo-page .brand {
+	gap: 9px;
+}
+.promo-page .brand-logo {
+	height: 31px;
+}
+.promo-nav-links,
+.promo-utilities {
+	gap: clamp(16px, 2vw, 30px);
+}
+.promo-utilities {
+	margin-left: auto;
+}
+.promo-nav-links a,
+.promo-signin,
+.promo-footer a {
+	font-size: 0.91rem;
+	font-weight: 600;
+	color: var(--ink);
+}
+.promo-nav-links a:hover,
+.promo-footer a:hover {
+	color: var(--red);
+}
+.promo-signin,
+.promo-explore,
+.promo-cta,
+.promo-inline-link,
+.promo-footer a {
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	gap: 9px;
+}
+.promo-signin {
+	border: 1px solid #bebdb8;
+	border-radius: 7px;
+	padding: 8px 13px;
+}
+.promo-signin:hover {
+	background: #efeeeb;
+}
+.promo-signin svg,
+.promo-footer a svg {
+	width: 16px;
+}
+.promo-hero {
+	position: relative;
+	isolation: isolate;
+	overflow: hidden;
+	background: #101313;
+	color: white;
+}
+.promo-hero .promo-circuit {
+	z-index: -2;
+	object-fit: cover;
+	object-position: center 53%;
+}
+.promo-hero::after {
+	content: "";
+	position: absolute;
+	z-index: -1;
+	inset: 0;
+	background: linear-gradient(90deg, #080b0bc2, #0c10113b 57%, transparent 76%);
+}
+.promo-hero-inner {
+	min-height: clamp(460px, 39vw, 580px);
+	padding-block: clamp(54px, 5.5vw, 88px);
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+	justify-content: center;
+}
+.promo-hero h1 {
+	font-size: clamp(3.2rem, 6.15vw, 6.35rem);
+	line-height: 1.02;
+	letter-spacing: -0.035em;
+	color: white;
+}
+:lang(th) .promo-hero h1 {
+	line-height: 1.25;
+	letter-spacing: normal;
+}
+.promo-hero p {
+	max-width: min(50%, 535px);
+	margin-top: 17px;
+	font-size: clamp(1rem, 1.4vw, 1.22rem);
+	color: #e1e2df;
+	line-height: 1.75;
+}
+.promo-hero-actions {
+	gap: 23px;
+	margin-top: 28px;
+}
+.promo-cta,
+.promo-explore {
+	min-height: 45px;
+	font-weight: 700;
+}
+.promo-page .promo-cta {
+	background: var(--red);
+	border-radius: 7px;
+	padding: 10px 20px;
+	color: white;
+}
+.promo-cta:hover {
+	background: #a82a14;
+}
+.promo-page .promo-explore {
+	color: white;
+}
+.promo-explore:hover {
+	text-decoration: underline;
+	text-underline-offset: 4px;
+}
+.promo-tour {
+	padding-block: clamp(48px, 5.5vw, 88px);
+}
+.promo-section-heading {
+	display: flex;
+	align-items: baseline;
+	justify-content: space-between;
+	gap: 20px;
+}
+.promo-page h2 {
+	font-size: clamp(2rem, 3.4vw, 3.5rem);
+	line-height: 1.12;
+	letter-spacing: -0.045em;
+}
+:lang(th) .promo-page :is(h2, .promo-caption h3) {
+	line-height: 1.35;
+	letter-spacing: normal;
+}
+.promo-section-heading p,
+.promo-caption p,
+.promo-dev-inner p {
+	font-size: 1rem;
+	line-height: 1.7;
+	color: var(--muted-ink);
+}
+.promo-controls {
+	border: 0;
+	padding: 0;
+	min-width: 0;
+	display: flex;
+	gap: 6px;
+	flex-wrap: wrap;
+	margin: 24px 0 16px;
+}
+.promo-controls button {
+	display: inline-flex;
+	align-items: center;
+	gap: 7px;
+	padding: 8px 13px;
+	border: 1px solid #d7d7d2;
+	border-radius: 6px;
+	background: transparent;
+	color: var(--muted-ink);
+	font-weight: 600;
+	cursor: pointer;
+}
+.promo-controls button svg {
+	width: 17px;
+}
+.promo-controls button:hover {
+	border-color: #93958e;
+}
+.promo-controls button[aria-pressed="true"] {
+	border-color: var(--ink);
+	background: var(--ink);
+	color: white;
+}
+.promo-preview {
+	background: #eeede8;
+	border: 1px solid #dcdad4;
+	border-radius: 12px;
+	overflow: hidden;
+	display: grid;
+	grid-template-columns: minmax(0, 0.8fr) minmax(0, 1.85fr);
+	align-items: center;
+}
+.promo-caption {
+	padding: clamp(22px, 3vw, 48px);
+}
+.promo-caption h3 {
+	font-size: clamp(1.55rem, 2.25vw, 2.45rem);
+	line-height: 1.23;
+	letter-spacing: -0.035em;
+}
+.promo-caption p {
+	margin-top: 14px;
+}
+.promo-inline-link {
+	color: #a52913;
+	font-weight: 700;
+	margin-top: 22px;
+}
+.promo-inline-link:hover {
+	text-decoration: underline;
+}
+.promo-product-shot {
+	margin: 25px 24px 25px 0;
+	box-shadow: 0 10px 28px #29241d1a;
+	border-radius: 7px;
+	overflow: hidden;
+	border: 1px solid #c8c8c0;
+	background: white;
+}
+.promo-product-shot img {
+	width: 100%;
+	height: auto;
+	display: block;
+}
+.promo-case {
+	display: grid;
+	grid-template-columns: minmax(0, 0.9fr) minmax(0, 1fr);
+	gap: clamp(28px, 6vw, 86px);
+	padding-block: clamp(32px, 4vw, 64px);
+	border-top: 1px solid #d7d7d2;
+}
+.promo-case .promo-case-label {
+	color: var(--red);
+	font-weight: 600;
+	margin-bottom: 8px;
+}
+.promo-case .promo-case-description {
+	margin-top: 10px;
+	line-height: 1.75;
+	color: var(--muted-ink);
+	font-size: 1rem;
+}
+.promo-case-decisions {
+	display: grid;
+	gap: 24px;
+}
+.promo-case-decisions .promo-inline-link {
+	justify-self: start;
+	margin: 0;
+}
+.promo-developers {
+	background: #191c1f;
+	color: #fbfaf8;
+}
+.promo-dev-inner {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	gap: clamp(30px, 8vw, 118px);
+	align-items: center;
+	padding-block: clamp(46px, 6vw, 90px);
+}
+.promo-dev-inner p {
+	color: #cdd0d0;
+	margin-top: 18px;
+	max-width: 520px;
+}
+.promo-tools h3 {
+	font-size: 0.9rem;
+	font-weight: 600;
+	line-height: 1.6;
+	color: #d9dad7;
+}
+.promo-tools ul {
+	padding: 0;
+	list-style: none;
+	margin: 12px 0 0;
+}
+.promo-tools li {
+	display: grid;
+	gap: 5px;
+	padding-block: 12px;
+	border-top: 1px solid #424548;
+}
+.promo-tools li code {
+	font:
+		600 0.9rem / 1.4 "IBM Plex Mono",
+		monospace;
+	color: #ff987e;
+}
+.promo-tools li span {
+	color: #d4d5d5;
+	font-size: 0.91rem;
+}
+.promo-footer {
+	min-height: 84px;
+	justify-content: space-between;
+	gap: 14px;
+}
+@media (max-width: 800px) {
+	.promo-case {
+		grid-template-columns: 1fr;
+	}
+	.promo-frame {
+		width: 92%;
+	}
+	.promo-nav-links {
+		display: none;
+	}
+	.promo-section-heading {
+		display: block;
+	}
+	.promo-section-heading p {
+		margin-top: 8px;
+	}
+	.promo-preview {
+		grid-template-columns: 1fr;
+	}
+	.promo-caption {
+		padding: 22px;
+	}
+	.promo-product-shot {
+		margin: 0 18px 18px;
+	}
+	.promo-dev-inner {
+		grid-template-columns: 1fr;
+	}
+}
+@media (max-width: 560px) {
+	.promo-nav {
+		min-height: 61px;
+		gap: 6px;
+	}
+	.promo-utilities {
+		gap: 7px;
+	}
+	.promo-page .brand {
+		gap: 5px;
+	}
+	.promo-page .brand-logo {
+		height: 25px;
+	}
+	.promo-page .brand-name {
+		font-size: 0.94rem;
+	}
+	.promo-signin {
+		font-size: 0.81rem;
+		padding: 7px;
+	}
+	.promo-signin svg {
+		display: none;
+	}
+	.promo-page .language-switch {
+		margin: 0;
+		min-inline-size: 0;
+	}
+	:where(.promo-page) .language-switch button {
+		padding: 4px;
+	}
+	.promo-hero-inner {
+		min-height: 510px;
+		padding-block: 185px 38px;
+		justify-content: flex-end;
+	}
+	.promo-hero .promo-circuit {
+		max-height: 74%;
+		object-position: 74% center;
+	}
+	.promo-hero::after {
+		background: linear-gradient(
+			to bottom,
+			transparent 11%,
+			#1013134d 33%,
+			#101313ed 62%,
+			#101313 75%
+		);
+	}
+	.promo-hero h1 {
+		font-size: clamp(2.25rem, 11.25vw, 3.6rem);
+	}
+	.promo-hero p {
+		max-width: 100%;
+	}
+	.promo-hero-actions {
+		gap: 17px;
+		margin-top: 22px;
+	}
+	.promo-controls {
+		gap: 5px;
+	}
+	.promo-controls button {
+		font-size: 0.84rem;
+		padding: 7px 8px;
+		gap: 4px;
+	}
+	.promo-section-heading p,
+	.promo-caption p {
+		font-size: 0.95rem;
+	}
+}
+.promo-page .language-switch button {
+	font-family: inherit;
+}
